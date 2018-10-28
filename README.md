@@ -48,5 +48,8 @@ select preferential_attachment('123', '456');
 
   call test_acc(@acc, 1000);
 
-
+2.3 to see acc
+  
+  select @acc;
+  
 
