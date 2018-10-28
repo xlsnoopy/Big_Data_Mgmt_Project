@@ -1,7 +1,7 @@
 # Big_Data_Mgmt_Project
 Link prediction in knowledge graph. 
 
-## Data
+### Data
 #### wn18rr:
 
 all.txt - full data set
@@ -12,6 +12,10 @@ valid.txt - validation set
 
 test.txt - test set
 
-## Load data
+### Load data
 
 load_data.sql
+
+### Link prediction metrics
+
+http://be.amazd.com/link-prediction/
