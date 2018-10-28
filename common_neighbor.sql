@@ -15,7 +15,7 @@ create function common_neighbor (x char(8), y char(8))
             (select A.rel, count(*) as count 
             from  (select rel, eout from wn18rr where ein=x) A 
             join (select rel, ein from wn18rr where eout=y) B 
-            on A.eout = B.ein 
+            on A.eout = B.ein and A.rel = B.rel
             group by A.rel 
             order by count desc
             limit 1) C);
