@@ -42,11 +42,11 @@ select preferential_attachment('123', '456');
 
 2.1 calculate acc on the entire test set
 
-call test_acc(@acc, -1);
+  call test_acc(@acc, -1);
 
 2.2 calculate acc on 1000 samples of the test set
 
-call test_acc(@acc, 1000);
+  call test_acc(@acc, 1000);
 
 
 
