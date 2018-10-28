@@ -11,3 +11,7 @@ train.txt - train set
 valid.txt - validation set
 
 test.txt - test set
+
+## Load data
+
+load_data.sql
