@@ -47,3 +47,11 @@ select preferential_attachment('123', '456');
 call test_acc(@acc,-1);
 
 select @acc;
+
+### results
+
+| metric                  | acc         |
+|-------------------------|:-----------:|
+| preferential attachment | 0.201292407 |
+| common neighbor         |             |
+| Jacoord's coefficient   |             |
