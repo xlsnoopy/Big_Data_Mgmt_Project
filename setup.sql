@@ -8,7 +8,7 @@ drop procedure if exists test_jc;
 
 drop function if exists preferential_attachment;
 drop function if exists common_neighbor;
-
+drop function if exists max_single;
 
 drop procedure if exists test_acc;
 
@@ -22,5 +22,6 @@ source test_jc.sql;
 
 source preferential_attachment.sql;
 source common_neighbor.sql;
+source max_single.sql;
 
 source test_acc.sql;
