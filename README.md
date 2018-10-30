@@ -55,5 +55,6 @@ select @acc;
 | metric                  | acc         |
 |-------------------------|:-----------:|
 | preferential attachment | 0.201292407 |
-| common neighbor         |             |
+| common neighbor         | 0.013893376 |
 | Jaccord's coefficient   |             |
+| max single              |             |
