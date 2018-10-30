@@ -36,13 +36,9 @@ source setup.sql
 
 query: 
 
-source cn_score.sql
-
 call cn_score('123', '456');
 
 test:
-
-source test_cn.sql 
 
 call test_cn(-1); # test over test set
 
@@ -56,13 +52,9 @@ call test_cn(10); # test on 10 samples in test set
 
 query: 
 
-source pa_score.sql
-
 call pa_score('123', '456');
 
-test:
-
-source test_pa.sql 
+test: 
 
 call test_pa(-1); # test over test set
 
@@ -75,13 +67,9 @@ call test_pa(10); # test on 10 samples in test set
 
 query: 
 
-source jc_score.sql
-
 call jc_score('123', '456');
 
-test:
-
-source test_jc.sql 
+test: 
 
 call test_jc(-1); # test over test set
 
@@ -92,6 +80,6 @@ call test_jc(10); # test on 10 samples in test set
 
 
 
-#### calculate accuracy
+### accuracy
 
 
