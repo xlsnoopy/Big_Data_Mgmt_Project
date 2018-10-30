@@ -1,10 +1,15 @@
-drop function if exists preferential_attachment;
-drop function if exists common_neighbor;
+drop procedure if exists cn_score;
+drop procedure if exists pa_score;
+drop procedure if exists jc_score;
 
-drop procedure if exists test_acc;
-drop procedure if exists run_test;
+drop procedure if exists test_cn;
+drop procedure if exists test_pa;
+drop procedure if exists test_jc;
 
-source preferential_attachment.sql;
-source common_neighbor.sql;
-source test_acc.sql;
-source test.sql;
+source cn_score.sql;
+source pa_score.sql;
+source jc_score.sql;
+
+source test_cn.sql;
+source test_pa.sql;
+source test_jc.sql;
