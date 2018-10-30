@@ -44,6 +44,8 @@ select preferential_attachment('123', '456');
 
 ### accuracy
 
+Note: make sure you edit test_acc.sql to use the correct metric and then source setup.sql before call test_acc. 
+
 call test_acc(@acc,-1);
 
 select @acc;
