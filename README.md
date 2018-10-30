@@ -41,6 +41,15 @@ select preferential_attachment('123', '456');
 
 ### Jaccord's coefficient
 
+### max single
+
+Let Cij be the count of relation i involving entity j. Let Mj = max(Cij) and Kj = argmax(Mj).
+
+Then max_single(x, y) = Kx if Mx >= My, else Ky. 
+
+query:
+
+select max_single('123', '456');
 
 ### accuracy
 
@@ -52,9 +61,9 @@ select @acc;
 
 ### results
 
-| metric                  | acc         |
-|-------------------------|:-----------:|
-| preferential attachment | 0.201292407 |
-| common neighbor         | 0.013893376 |
-| Jaccord's coefficient   |             |
-| max single              |             |
+| metric                  | acc   |
+|-------------------------|:-----:|
+| preferential attachment | 0.201 |
+| common neighbor         | 0.014 |
+| Jaccord's coefficient   |       |
+| max single              | 0.656 |
