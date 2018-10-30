@@ -43,7 +43,7 @@ select preferential_attachment('123', '456');
 
 ### max single
 
-Let Cij be the count of relation i involving entity j. Let Mj = max(Cij) and Kj = argmax_i(Mj).
+Let Cij be the count of relation i involving entity j, then Mj = max(Cij) and Kj = argmax_i(Mj).
 
 Then max_single(x, y) = Kx if Mx >= My, else Ky. 
 
