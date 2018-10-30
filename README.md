@@ -56,4 +56,4 @@ select @acc;
 |-------------------------|:-----------:|
 | preferential attachment | 0.201292407 |
 | common neighbor         |             |
-| Jacoord's coefficient   |             |
+| Jaccord's coefficient   |             |
