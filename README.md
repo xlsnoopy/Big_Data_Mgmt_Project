@@ -31,13 +31,15 @@ source setup.sql
 
 ### common neighbor
 
+query:
+
+select common_neighbor('123', '456');
 
 ### preferential attachment
 
-query: 
+query:
 
 select preferential_attachment('123', '456');
-
 
 ### Jaccord's coefficient
 
