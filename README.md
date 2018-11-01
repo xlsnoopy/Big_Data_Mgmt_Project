@@ -69,3 +69,4 @@ select @acc;
 | common neighbor         | 0.014 |
 | Jaccard's coefficient   | 0.385 |
 | max single              | 0.656 |
+| friends measure         | 0.766 |
