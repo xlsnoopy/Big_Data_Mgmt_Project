@@ -67,5 +67,5 @@ select @acc;
 |-------------------------|:-----:|
 | preferential attachment | 0.201 |
 | common neighbor         | 0.014 |
-| Jaccord's coefficient   |       |
+| Jaccard's coefficient   | 0.385 |
 | max single              | 0.656 |
