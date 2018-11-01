@@ -41,7 +41,7 @@ query:
 
 select preferential_attachment('123', '456');
 
-### Jaccord's coefficient
+### Jaccard's coefficient
 
 ### max single
 
