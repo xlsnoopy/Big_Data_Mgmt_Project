@@ -20,7 +20,7 @@ http://be.amazd.com/link-prediction/
 
 source load_data.sql
 
-source create_test_set.sql # Note: this creates a test set w/ at least one of the entities in training set
+source create_aux_tb.sql # creates test_set, demo_set, and relation
 
 
 ### Setup
@@ -43,6 +43,10 @@ select preferential_attachment('123', '456');
 
 ### Jaccard's coefficient
 
+query:
+
+select jaccard_coefficient('123', '456');
+
 ### max single
 
 Let Cij be the count of relation i involving entity j, then Mj = max(Cij) and Kj = argmax_i(Mj).
@@ -52,6 +56,12 @@ Then max_single(x, y) = Kx if Mx >= My, else Ky.
 query:
 
 select max_single('123', '456');
+
+### friend measure
+
+query:
+
+select friend_measure('123', '456');
 
 ### accuracy
 
