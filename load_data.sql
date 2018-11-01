@@ -1,0 +1,39 @@
+#create database project590;
+
+use project590;
+
+drop table if exists wn18rr;
+create table wn18rr (
+ein char(8), 
+rel char(28), 
+eout char(8),
+primary key (ein, rel, eout)
+);
+load data local infile 'data/wn18rr/all.txt' into table wn18rr;
+
+drop table if exists wn18rr_train;
+create table wn18rr_train (
+ein char(8), 
+rel char(28), 
+eout char(8),
+primary key (ein, rel, eout)
+);
+load data local infile 'data/wn18rr/train.txt' into table wn18rr_train;
+
+drop table if exists wn18rr_valid;
+create table wn18rr_valid (
+ein char(8), 
+rel char(28), 
+eout char(8),
+primary key (ein, rel, eout)
+);
+load data local infile 'data/wn18rr/valid.txt' into table wn18rr_valid;
+
+drop table if exists wn18rr_test;
+create table wn18rr_test (
+ein char(8), 
+rel char(28), 
+eout char(8),
+primary key (ein, rel, eout)
+);
+load data local infile 'data/wn18rr/test.txt' into table wn18rr_test;
