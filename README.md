@@ -75,8 +75,8 @@ select @acc;
 
 | metric                  | acc   |
 |-------------------------|:-----:|
-| preferential attachment | 0.201 |
-| common neighbor         | 0.014 |
+| preferential attachment | 0.237 |
+| common neighbor         | 0.106 |
 | Jaccard's coefficient   | 0.385 |
-| max single              | 0.656 |
+| max single              | 0.686 |
 | friends measure         | 0.766 |
