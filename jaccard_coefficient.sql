@@ -57,8 +57,13 @@ CREATE function jaccard_coefficient(x char(8),  y char(8))
 				LEAVE label1;
 			END LOOP label1;
 		end if;
-            
-		set s = if(@r is null, '_no_rel', @r);
+		
+        if (@r is null) then
+			select rel into s from relation order by rand() limit 1;
+		else
+			set s = @r;
+		end if;
+		#set s = if(@r is null, '_no_rel', @r);
         return s;
 	END //
 DELIMITER ;

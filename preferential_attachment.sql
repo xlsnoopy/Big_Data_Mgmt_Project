@@ -10,8 +10,8 @@ create function preferential_attachment (x char(8), y char(8))
 		set s = (select rel from wn18rr_train where ein = x and eout = y);  
 		if (s is null) then 
 			
-            select rel into @r from
-            (select AA.rel as rel, (AA.count * BB.count) as pre_att
+            select rr into @r from
+            (select AA.rel as rr, (AA.count * BB.count) as pre_att
 			from
 			(select A.rel, B.count 
 			from (select rel from relation) A 
@@ -27,9 +27,10 @@ create function preferential_attachment (x char(8), y char(8))
 			on AA.rel = BB.rel
             order by pre_att desc
             limit 1) aa;
+            
             
             select pre_att into @c from
-            (select AA.rel as rel, (AA.count * BB.count) as pre_att
+            (select AA.rel as rr, (AA.count * BB.count) as pre_att
 			from
 			(select A.rel, B.count 
 			from (select rel from relation) A 
@@ -47,8 +48,17 @@ create function preferential_attachment (x char(8), y char(8))
             limit 1) aa;
             
             
+            #select * from
+            #(select rel, count(rel) from wn18rr_train where ein=x group by rel)
             
-            set s = if(@c is null, '_no_rel', @r);
+            
+            
+            if (@c is null) then
+				select rel into s from relation order by rand() limit 1;
+			else
+				set s = @r;
+			end if;
+            #set s = if(@c is null, '_no_rel', @r);
             
 		end if;  
 		return s; 
