@@ -95,7 +95,7 @@ POINT_TO has attribute name (the 11 relationships)
 
 #### load data
 
-(move the files to /var/lib/neo4j/import so that you can load them)
+(Note: move files to /var/lib/neo4j/import before you can load them to neo4j. Specifically, put all.txt, id.txt, word.txt, and word_id_pair.txt to /var/lib/neo4j/import)
 
 ##### load word
 
