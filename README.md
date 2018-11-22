@@ -107,7 +107,7 @@ create index on :Word(value)
 
 create index on :Index(value)
 
-#### load word-index relationship
+##### load word-index relationship
 
 load csv from "file:///wn18rr/word_id_pair.txt" as line fieldterminator "\t"
 
@@ -117,7 +117,7 @@ merge (i:Index {value : line[1]})
 
 create (w)-[:ASSOCIATE_WITH {name : '_associate_with'}]->(i)
 
-#### load ein-rel-eout
+##### load ein-rel-eout
 
 using periodic commit 1000
 
