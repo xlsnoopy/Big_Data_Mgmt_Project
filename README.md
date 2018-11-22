@@ -84,29 +84,47 @@ select @acc;
 ### neo4j
 
 #### Note: database contains Word, Index, and they are related as the following
+
 (w:Word)-[r:ASSOCIATE_WITH]->(i:Index)
+
 (ein:Index)-[r:POINT_TO]->(eout:Index)
+
 Word/Index has attribute value
+
 POINT_TO has attribute name (the 11 relationships)
 
 #### load data
+
 (move the files to /var/lib/neo4j/import so that you can load them)
 
 ##### load word
+
 load csv from "file:///wn18rr/word.txt" as line create (:Word {value: line[0]});
+
 load csv from "file:///wn18rr/id.txt" as line create (:Index {value: line[1]});
+
 create index on :Word(value)
+
 create index on :Index(value)
 
 #### load word-index relationship
+
 load csv from "file:///wn18rr/word_id_pair.txt" as line fieldterminator "\t"
+
 merge (w:Word {value : line[0]})
+
 merge (i:Index {value : line[1]})
+
 create (w)-[:ASSOCIATE_WITH {name : '_associate_with'}]->(i)
 
 #### load ein-rel-eout
+
 using periodic commit 1000
+
 load csv from "file:///wn18rr/all.txt" as line fieldterminator "\t"
+
 merge (ein:Word {value : line[0]})
+
 merge (eout:Word {value : line[2]})
+
 create (ein)-[:POINT_TO {name : line[1]}]->(eout)
