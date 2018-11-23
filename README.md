@@ -128,3 +128,9 @@ merge (ein:Index {value : line[0]})
 merge (eout:Index {value : line[2]})
 
 create (ein)-[:POINT_TO {name : line[1]}]->(eout)
+
+### query examples
+
+#### find the relation between two words
+
+match (w1:Word)-[:ASSOCIATE_WITH]->(ein:Index)-[r:POINT_TO]->(eout:Index)<-[:ASSOCIATE_WITH]-(w2:Word) where w1.value="physical_entity" and w2.value="entity" return r.name
