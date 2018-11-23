@@ -123,8 +123,8 @@ using periodic commit 1000
 
 load csv from "file:///wn18rr/all.txt" as line fieldterminator "\t"
 
-merge (ein:Word {value : line[0]})
+merge (ein:Index {value : line[0]})
 
-merge (eout:Word {value : line[2]})
+merge (eout:Index {value : line[2]})
 
 create (ein)-[:POINT_TO {name : line[1]}]->(eout)
