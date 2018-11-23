@@ -101,7 +101,7 @@ POINT_TO has attribute name (the 11 relationships)
 
 load csv from "file:///wn18rr/word.txt" as line create (:Word {value: line[0]});
 
-load csv from "file:///wn18rr/id.txt" as line create (:Index {value: line[1]});
+load csv from "file:///wn18rr/id.txt" as line create (:Index {value: line[0]});
 
 create index on :Word(value)
 
